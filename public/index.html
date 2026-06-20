@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicMafia AI - Luxury Profile Pictures & Portraits</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo">PicMafia <span>AI</span></div>
+      <p class="subtitle">Create luxury AI images for Instagram, TikTok, and profile pictures.</p>
+    </header>
+
+    <main class="app-grid">
+      <section class="card control-panel">
+        <div class="form-group">
+          <label for="prompt">Describe your portrait</label>
+          <textarea id="prompt" placeholder="E.g., A confident look, sharp focus, neon aesthetic..." maxlength="1000"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Quick Examples</label>
+          <div class="example-tags">
+            <button class="example-btn" data-prompt="luxury Instagram profile photo, black outfit, NYC night lights">NYC Night</button>
+            <button class="example-btn" data-prompt="professional headshot, clean background, sharp face, realistic">Pro Headshot</button>
+            <button class="example-btn" data-prompt="mafia style portrait, cinematic lighting, luxury street background">Mafia Style</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group val-half">
+            <label for="style">Style Preset</label>
+            <select id="style">
+              <option value="Mafia Style">Mafia Style</option>
+              <option value="Luxury Instagram DP" selected>Luxury Instagram DP</option>
+              <option value="Professional Headshot">Professional Headshot</option>
+              <option value="NYC Street Look">NYC Street Look</option>
+              <option value="Cartoon Style">Cartoon Style</option>
+              <option value="Royal Boss Look">Royal Boss Look</option>
+            </select>
+          </div>
+
+          <div class="form-group val-half">
+            <label for="size">Image Dimensions</label>
+            <select id="size">
+              <option value="1024x1024" selected>Square (1024x1024)</option>
+              <option value="1024x1536">Portrait (1024x1536)</option>
+              <option value="1536x1024">Landscape (1536x1024)</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="generate-btn" class="btn btn-primary">
+          <span class="btn-text">Generate Masterpiece</span>
+          <div class="spinner hidden"></div>
+        </button>
+
+        <p class="warning-text">⚠️ AI generation may cost OpenAI API credits.</p>
+        <div id="error-message" class="error-box hidden"></div>
+      </section>
+
+      <section class="card preview-panel">
+        <div id="preview-placeholder" class="preview-placeholder">
+          <div class="placeholder-icon">✦</div>
+          <p>Your generated portrait will appear here</p>
+        </div>
+
+        <div id="image-container" class="image-container hidden">
+          <img id="output-image" src="" alt="Generated AI Portrait">
+          <button id="download-btn" class="btn btn-secondary">Download High-Res Image</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered by AI. Built for creators.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
