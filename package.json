@@ -1,0 +1,18 @@
+{
+  "name": "picmafia-ai",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI image generator website for Instagram/TikTok profile pictures and stylish portraits.",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Static site ready'",
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.6.0",
+    "openai": "^4.28.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
